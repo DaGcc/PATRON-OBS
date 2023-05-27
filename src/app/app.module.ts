@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule } from "@angular/common/http"
+
+import { HttpClientModule } from "@angular/common/http"
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PagesComponent } from './pages/pages/pages.component';
+
 import { PagestwoComponent } from './pages/pagestwo/pagestwo.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { PagesComponent } from './pages/pages/pages.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -15,7 +20,9 @@ import { PagestwoComponent } from './pages/pagestwo/pagestwo.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
