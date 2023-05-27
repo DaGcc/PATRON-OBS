@@ -1,0 +1,48 @@
+<div class="p-4">
+    <table class="table table-striped ">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">#Id</th>
+                <th scope="col">nombre</th>
+                <th scope="col">precio</th>
+                <th scope="col 2" class="mx-auto">acciones</th>
+    
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let d of data">
+    
+                <th scope="row">{{d.id}}</th>
+                <td>{{d.title}}</td>
+                <td>{{d.price}}</td>
+    
+                <td>
+                    <button type="button" class="btn btn-primary">Primary</button>
+                    <button type="button" class="btn btn-danger">Danger</button>
+                </td>
+            </tr>
+    
+        </tbody>
+    </table>
+</div>
+
+
+<nav aria-label="..." class="d-flex justify-content-end me-5">
+    <ul class="pagination">
+        <li class="page-item" >
+            <a class="page-link" (click)="anterior()"  aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li class="page-item"><a class="page-link" >1</a></li>
+        <li class="page-item active" aria-current="page">
+            <span class="page-link">2</span>
+        </li>
+        <li class="page-item"><a class="page-link" >3</a></li>
+        <li class="page-item" >
+            <a class="page-link" (click)="siguiente()" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav>
